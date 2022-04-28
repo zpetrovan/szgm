@@ -1,0 +1,60 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/constants.typoscript">
+
+
+############
+### PAGE ###
+############
+page {
+    logo {
+        file = EXT:szgm_sitepackage/Resources/Public/Images/logo.svg
+        fileInverted = EXT:szgm_sitepackage/Resources/Public/Images/logo-inverted.svg
+        height = 52
+        width = 192
+        alt = SZGM Sitepackage
+        linktitle = SZGM Sitepackage
+    }
+    favicon {
+        file = EXT:szgm_sitepackage/Resources/Public/Icons/favicon.ico
+    }
+    fluidtemplate {
+        layoutRootPath = EXT:szgm_sitepackage/Resources/Private/Layouts/Page/
+        partialRootPath = EXT:szgm_sitepackage/Resources/Private/Partials/Page/
+        templateRootPath = EXT:szgm_sitepackage/Resources/Private/Templates/Page/
+    }
+}
+
+
+##################
+### EXTENSIONS ###
+##################
+plugin.bootstrap_package {
+    view {
+        layoutRootPath = EXT:szgm_sitepackage/Resources/Private/Layouts/
+        partialRootPath = EXT:szgm_sitepackage/Resources/Private/Partials/
+        templateRootPath = EXT:szgm_sitepackage/Resources/Private/Templates/
+    }
+}
+
+
+########################
+### CONTENT ELEMENTS ###
+########################
+plugin.bootstrap_package_contentelements {
+    view {
+        layoutRootPath = EXT:szgm_sitepackage/Resources/Private/Layouts/ContentElements/
+        partialRootPath = EXT:szgm_sitepackage/Resources/Private/Partials/ContentElements/
+        templateRootPath = EXT:szgm_sitepackage/Resources/Private/Templates/ContentElements/
+    }
+}
+
+
+################################
+### BOOTSTRAP SCSS CONSTANTS ###
+################################
+plugin.bootstrap_package.settings.scss {
+    primary = #eb3e4a
+    secondary = #013859
+}
